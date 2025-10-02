@@ -1,0 +1,29 @@
+
+Mini-plantilla para tu guía (copiar/pegar)
+------------------------------------------
+
+1) Ver configuración actual
+
+git config --global --list
+
+
+2) Limpiar identidad (global)
+
+git config --global --unset-all user.name
+git config --global --unset-all user.email
+
+
+3) Configurar identidad
+
+git config --global user.name "Tu Nombre"
+git config --global user.email "tu_correo@example.com"
+
+
+4) Borrar credenciales guardadas
+
+Windows: Panel de control → Administrador de credenciales → eliminar git:https://github.com
+
+
+5) Probar
+
+git config --global --list

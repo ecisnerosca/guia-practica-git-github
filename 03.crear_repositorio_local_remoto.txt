@@ -1,0 +1,44 @@
+Guía: crear repo local en Visual Studio y subirlo a GitHub
+-------------------------------------------------------------
+
+1) Crea el proyecto en Visual Studio
+
+File → New → Project → Console App (.NET)
+Ubicación: C:\Proyectos\practica02 (ejemplo)
+
+2) Crea .gitignore (Visual Studio / .NET)
+
+cd C:\Proyectos\practica02
+
+echo .>. gitignore
+echo .vs/>>.gitignore
+echo bin/>>.gitignore
+echo obj/>>.gitignore
+
+type .gitignore
+
+3) Inicializa Git y primer commit
+
+git init
+git status
+git add .
+git commit -m "primer commit"
+
+
+4) Crea el repo en GitHub
+
+En GitHub: New repository → nombre: practica02
+Importante: créalo vacío (sin README, sin .gitignore, sin License) para evitar conflictos.
+
+git branch -M main
+git remote add origin https://github.com/ecisnerosca/practica02.git
+git push -u origin main
+
+5) Flujo diario (cambios y push)
+
+git status
+git add .
+git commit -m "agrega X"   # cambia el mensaje según lo que hiciste
+git push
+
+

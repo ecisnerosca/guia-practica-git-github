@@ -1,0 +1,38 @@
+Clonar repositorios
+
+
+1) Clonar tu propio repositorio y trabajar
+
+# Clona tu repo (ejemplo)
+git clone https://github.com/ecisnerosca/Taller01.git
+cd Taller01
+
+# Revisa el remoto
+git remote -v      # debe apuntar a tu repo
+
+# Flujo de trabajo
+git status
+git add .
+git commit -m "mi primer cambio"
+git push           # sube a tu repo (origin)
+
+
+2) Tomar repo de un tercero y reemplazar el remoto original
+
+Úsalo si no quieres mantener vínculo con el original
+
+git clone https://github.com/alguien/proyecto.git
+cd proyecto
+
+git remote -v
+git remote remove origin                 # borras el remoto original
+
+# Crea repo vacío en tu GitHub y enlaza
+git remote add origin https://github.com/ecisnerosca/Taller01.git
+git branch -M main
+git push -u origin main
+
+# Cambios
+git add .
+git commit -m "mi primer cambio"
+git push
